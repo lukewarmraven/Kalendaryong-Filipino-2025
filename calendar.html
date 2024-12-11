@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+As part of your preparation for the midterm examination in Web Development, your task is 
+to create a static and interactive Calendar Web Page for the year 2025. The page must 
+meet the following minimum requirements:
+
+1. Display all the months of the year 2025.
+
+2. Include all the holidays for each month, with each holiday linked to a separate page 
+containing its corresponding information.
+
+3. Utilize Headings, Paragraphs, Tables, Image Links, and URL Links effectively.
+
+Feel free to extend the design and interaction features based on your skills and creativity, 
+but ensure the minimum requirements are met. 
+
+On Saturday, please provide a goolge drive link where all the Midterm Activities are consolidated.
+
+Best of luck, and I look forward to seeing your innovative designs!
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calendar.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Ultra&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/calendar.png">
+    <title>Calendar 2025</title>
+    <script src="calendar.js" defer></script>
+</head>
+
+<body>      
+    <!--
+        header - menu, title and logo
+        main 
+            container - will have the horizontal scrolling, snaps each month
+                month-box - will have the whole months in each individual box
+                    month-year-line - row where month and year is stored
+                        year-text
+                        month-text
+                    days-names-line - where sun,mon,tue, etc is stored
+                        day-text
+                    days-grid - will contain 7x5 boxes, will store the days
+                        day-container
+                            day
+                    prev-next-line - prev-next months
+                    holidays? - will list all holidays in that month
+        footer - just a footer with my contacts
+    -->
+
+    <header>
+        <a class="calendar-text override-target" href="calendar.html">Kalendaryong Filipino</a>
+        <div class="calendar-text">2025</div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="blank-box">2024</div>
+            <!-- ################## JANUARY ######################## -->
+            <div class="month-box">
+                <div class="month-year-line">
+                    <div class="year-text" id="year1">2025</div>
+                    <div class="month-text">January</div>
+                    <div class="year-text" id="year2">2025</div>
+                </div>
+
+                <div class="days-names-line">
+                    <div class="day-text" id="sun">sun</div>
+                    <div class="day-text">mon</div>
+                    <div class="day-text">tue</div>
+                    <div class="day-text">wed</div>
+                    <div class="day-text">thu</div>
+                    <div class="day-text">fri</div>
+                    <div class="day-text">sat</div>
+                </div>
+                    
+                <div class="days-grid">
+                    <div class="day-container">
+                        <div class="day"> </div>
+                        <div class="day"> </div>
+                        <div class="day"> </div>
+                        <div class="day"><a class="holidate" href="desc_page.html?month=January&date=1" target="_blank">1</a></div>
+                        <div class="day">2</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+                        <div class="day" id="sun">5</div>
+                        <div class="day">6</div>
+                        <div class="day">7</div>
+                        <div class="day">8</div>
+                        <div class="day">9</div>
+                        <div class="day">10</div>
+                        <div class="day">11</div>
+                        <div class="day" id="sun">12</div>
+                        <div class="day">13</div>
+                        <div class="day">14</div>
+                        <div class="day">15</div>
+                        <div class="day">16</div>
+                        <div class="day">17</div>
+                        <div class="day">18</div>
+                        <div class="day" id="sun">19</div>
+                        <div class="day">20</div>
+                        <div class="day">21</div>
+                        <div class="day">22</div>
+                        <div class="day">23</div>
+                        <div class="day">24</div>
+                        <div class="day">25</div>
+                        <div class="day" id="sun">26</div>
+                        <div class="day">27</div>
+                        <div class="day">28</div>
+                        <div class="day"><a class="holidate" href="desc_page.html?month=January&date=29" target="_blank">29</a></div>
+                        <div class="day">30</div>
+                        <div class="day">31</div>
+                        <div class="day"> </div>
+
+                      </div>                      
+                </div>
+
+                <div class="prev-next-line">
+                    <div class="prev">2024</div>
+                    <div class="holidays">
+                        <div class="holidays-text">Regular Holidays
+                            <div class="holiday"><a class="holiday-link" href="desc_page.html?month=January&date=1" target="_blank">Jan. 1 (Wed) - New Year's Day</a></div>
+                        </div>
+                        <br>
+                        <div class="holidays-text">Special (Non-Working) Holidays
+                            <div class="holiday"><a href="desc_page.html?month=January&date=29" target="_blank" class="holiday-link">Jan. 29 (Wed) - Chinese New Year</a></div>
+                        </div>
+                    </div>
+                    <div class="next">February<br>2025</div>
+                </div>
+            </div>
+        <!-- END -->
+
+        <!-- ################## FEBRUARY ######################## -->
+        <div class="month-box">
+            <div class="month-year-line">
+                <div class="year-text" id="year1">2025</div>
+                <div class="month-text">February</div>
+                <div class="year-text" id="year2">2025</div>
+            </div>
+
+            <div class="days-names-line">
+                <div class="day-text" id="sun">sun</div>
+                <div class="day-text">mon</div>
+                <div class="day-text">tue</div>
+                <div class="day-text">wed</div>
+                <div class="day-text">thu</div>
+                <div class="day-text">fri</div>
+                <div class="day-text">sat</div>
+            </div>
+                
+            <div class="days-grid">
+                <div class="day-container">
+                    <div class="day"> </div>
+                    <div class="day"> </div>
+                    <div class="day"> </div>
+                    <div class="day"> </div>
+                    <div class="day"> </div>
+                    <div class="day"> </div>
+                    <div class="day">1</div>
+                    <div class="day" id="sun">2</div>
+                    <div class="day">3</div>
+                    <div class="day">4</div>
+                    <div class="day">5</div>
+                    <div class="day">6</div>
+                    <div class="day">7</div>
+                    <div class="day">8</div>
+                    <div class="day" id="sun">9</div>
+                    <div class="day">10</div>
+                    <div class="day">11</div>
+                    <div class="day">12</div>
+                    <div class="day">13</div>
+                    <div class="day">14</div>
+                    <div class="day">15</div>
+                    <div class="day" id="sun">16</div>
+                    <div class="day">17</div>
+                    <div class="day">18</div>
+                    <div class="day">19</div>
+                    <div class="day">20</div>
+                    <div class="day">21</div>
+                    <div class="day">22</div>
+                    <div class="day" id="sun">23</div>
+                    <div class="day">24</div>
+                    <div class="day"><a href="desc_page.html?month=February&date=25" class="holidate">25</a> </div>
+                    <div class="day">26</div>
+                    <div class="day">27</div>
+                    <div class="day">28</div>
+                    <div class="day"> </div>
+
+                  </div>                      
+            </div>
+
+            <div class="prev-next-line">
+                <div class="prev">January<br>2025</div>
+                <div class="holidays">
+                    <div class="holidays-text">Regular Holidays</div><br>
+                    <div class="holidays-text">Special (Working) Holidays
+                        <div class="holiday"><a href="desc_page.html?month=February&date=25" target="_blank" class="holiday-link"> Feb. 25 (Tue) - EDSA People Power <br> Revolution Anniversary</a></div>
+                    </div>
+                </div>
+                <div class="next">March<br>2025</div>
+            </div>
+        </div>
+    <!-- END -->
+
+    <!-- ################## MARCH   ######################## -->
+    <div class="month-box" >
+        <div class="month-year-line">
+            <div class="year-text" id="year1">2025</div>
+            <div class="month-text">March</div>
+            <div class="year-text" id="year2">2025</div>
+        </div>
+
+        <div class="days-names-line">
+            <div class="day-text" id="sun">sun</div>
+            <div class="day-text">mon</div>
+            <div class="day-text">tue</div>
+            <div class="day-text">wed</div>
+            <div class="day-text">thu</div>
+            <div class="day-text">fri</div>
+            <div class="day-text">sat</div>
+        </div>
+            
+        <div class="days-grid">
+            <div class="day-container">
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar">1</div>
+                <div class="day sun" id="mar">2</div>
+                <div class="day" id="mar">3</div>
+                <div class="day" id="mar">4</div>
+                <div class="day" id="mar">5</div>
+                <div class="day" id="mar">6</div>
+                <div class="day" id="mar">7</div>
+                <div class="day" id="mar">8</div>
+                <div class="day sun" id="mar">9</div>
+                <div class="day" id="mar">10</div>
+                <div class="day" id="mar">11</div>
+                <div class="day" id="mar">12</div>
+                <div class="day" id="mar">13</div>
+                <div class="day" id="mar">14</div>
+                <div class="day" id="mar">15</div>
+                <div class="day sun" id="mar">16</div>
+                <div class="day" id="mar">17</div>
+                <div class="day" id="mar">18</div>
+                <div class="day" id="mar">19</div>
+                <div class="day" id="mar">20</div>
+                <div class="day" id="mar">21</div>
+                <div class="day" id="mar">22</div>
+                <div class="day sun" id="mar">23</div>
+                <div class="day" id="mar">24</div>
+                <div class="day" id="mar">25</div>
+                <div class="day" id="mar">26</div>
+                <div class="day" id="mar">27</div>
+                <div class="day" id="mar">28</div>
+                <div class="day" id="mar">29</div>
+                <div class="day sun" id="mar">30</div>
+                <div class="day" id="mar">31</div>
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar"> </div>
+                <div class="day" id="mar"> </div>
+              </div>                      
+        </div>
+
+        <div class="prev-next-line">
+            <div class="prev">February<br>2025</div>
+            <div class="holidays">
+                <div class="holidays-text">Regular Holidays</div><br>
+                <div class="holidays-text">Special (Non-Working) Holidays</div>
+            </div>
+            <div class="next">April<br>2025</div>
+        </div>
+    </div>
+<!-- END -->
+            
+
+    <!-- ################## APRIL ######################## -->
+    <div class="month-box">
+        <div class="month-year-line">
+            <div class="year-text" id="year1">2025</div>
+            <div class="month-text">April</div>
+            <div class="year-text" id="year2">2025</div>
+        </div>
+
+        <div class="days-names-line">
+            <div class="day-text" id="sun">sun</div>
+            <div class="day-text">mon</div>
+            <div class="day-text">tue</div>
+            <div class="day-text">wed</div>
+            <div class="day-text">thu</div>
+            <div class="day-text">fri</div>
+            <div class="day-text">sat</div>
+        </div>
+            
+        <div class="days-grid">
+            <div class="day-container">
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day">4</div>
+                <div class="day">5</div>
+                <div class="day" id="sun">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <div class="day"><a href="desc_page.html?month=April&date=9" target="_blank" class="holidate">9</a> </div>
+                <div class="day">10</div>
+                <div class="day">11</div>
+                <div class="day">12</div>
+                <div class="day" id="sun">13</div>
+                <div class="day">14</div>
+                <div class="day">15</div>
+                <div class="day">16</div>
+                <div class="day"><a href="desc_page.html?month=April&date=17" target="_blank" class="holidate">17</a></div>
+                <div class="day"><a href="desc_page.html?month=April&date=18" target="_blank" class="holidate">18</a></div>
+                <div class="day"><a href="desc_page.html?month=April&date=19" target="_blank" class="holidate">19</a></div>
+                <div class="day" id="sun">20</div>
+                <div class="day">21</div>
+                <div class="day">22</div>
+                <div class="day">23</div>
+                <div class="day">24</div>
+                <div class="day">25</div>
+                <div class="day">26</div>
+                <div class="day" id="sun">27</div>
+                <div class="day">28</div>
+                <div class="day">29</div>
+                <div class="day">30</div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+                <div class="day"> </div>
+              </div>                      
+        </div>
+
+        <div class="prev-next-line">
+            <div class="prev">March<br>2025</div>
+            <div class="holidays">
+                <div class="holidays-text">Regular Holidays
+                    <div class="holiday" id="apr"><a href="desc_page.html?month=April&date=9" target="_blank" class="holiday-link"> Apr. 9 (Wed) - Araw ng Kagitingan</a></div>
+                    <div class="holiday" id="apr"><a href="desc_page.html?month=April&date=17" target="_blank" class="holiday-link">Apr. 17 (Thu) - Maundy Thursday</a></div>
+                    <div class="holiday" id="apr"><a href="desc_page.html?month=April&date=18" target="_blank" class="holiday-link">Apr. 18 (Fri) - Good Friday</a></div>
+                        <div class="holidays-text">Special (Non-Working) Holidays
+                            <div class="holiday" id="apr"><a href="desc_page.html?month=April&date=19" target="_blank" class="holiday-link">Apr. 19 (Sat) - Black Saturday</a></div>
+                        </div>
+                </div>
+
+            </div>
+            <div class="next">May<br>2025</div>
+        </div>
+    </div>
+<!-- END -->
+
+<!-- ################## MAY ######################## -->
+<div class="month-box">
+    <div class="month-year-line">
+        <div class="year-text" id="year1">2025</div>
+        <div class="month-text">May</div>
+        <div class="year-text" id="year2">2025</div>
+    </div>
+
+    <div class="days-names-line">
+        <div class="day-text" id="sun">sun</div>
+        <div class="day-text">mon</div>
+        <div class="day-text">tue</div>
+        <div class="day-text">wed</div>
+        <div class="day-text">thu</div>
+        <div class="day-text">fri</div>
+        <div class="day-text">sat</div>
+    </div>
+        
+    <div class="days-grid">
+        <div class="day-container">
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"><a href="desc_page.html?month=May&date=1" class="holidate">1</a></div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day" id="sun">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day" id="sun">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day" id="sun">18</div>
+            <div class="day">19</div>
+            <div class="day">20</div>
+            <div class="day">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day" id="sun">25</div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day">28</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+            <div class="day">31</div>
+          </div>                      
+    </div>
+
+    <div class="prev-next-line">
+        <div class="prev">April<br>2025</div>
+        <div class="holidays">
+            <div class="holidays-text">Regular Holidays
+                <div class="holiday"><a href="desc_page.html?month=May&date=1" class="holiday-link">May 1 (Thu) - Labor Day</a></div>
+                <br>
+                <div class="holidays-text">Special (Non-Working) Holidays</div>
+            </div>
+        </div>
+        <div class="next">June<br>2025</div>
+    </div>
+</div>
+<!-- END -->
+
+<!-- ################## June ######################## -->
+<div class="month-box">
+    <div class="month-year-line">
+        <div class="year-text" id="year1">2025</div>
+        <div class="month-text">June</div>
+        <div class="year-text" id="year2">2025</div>
+    </div>
+
+    <div class="days-names-line">
+        <div class="day-text" id="sun">sun</div>
+        <div class="day-text">mon</div>
+        <div class="day-text">tue</div>
+        <div class="day-text">wed</div>
+        <div class="day-text">thu</div>
+        <div class="day-text">fri</div>
+        <div class="day-text">sat</div>
+    </div>
+        
+    <div class="days-grid">
+        <div class="day-container">
+            <div class="day" id="sun">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day">7</div>
+            <div class="day" id="sun">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day"><a href="desc_page.html?month=June&date=12" class="holidate">12</a></div>
+            <div class="day">13</div>
+            <div class="day">14</div>
+            <div class="day" id="sun">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day">20</div>
+            <div class="day">21</div>
+            <div class="day" id="sun">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day">25</div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day">28</div>
+            <div class="day" id="sun">29</div>
+            <div class="day">30</div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+          </div>                      
+    </div>
+
+    <div class="prev-next-line">
+        <div class="prev">May<br>2025</div>
+        <div class="holidays">
+            <div class="holidays-text">Regular Holidays
+                <div class="holiday"><a href="desc_page.html?month=June&date=12" class="holiday-link">Jun. 12 (Thu) - Independence Day</a></div>
+                <br>
+                <div class="holidays-text">Special (Non-Working) Holidays</div>
+            </div>
+        </div>
+        <div class="next">July<br>2025</div>
+    </div>
+</div>
+<!-- END -->
+
+<!-- ################## July ######################## -->
+<div class="month-box">
+    <div class="month-year-line">
+        <div class="year-text" id="year1">2025</div>
+        <div class="month-text">July</div>
+        <div class="year-text" id="year2">2025</div>
+    </div>
+
+    <div class="days-names-line">
+        <div class="day-text" id="sun">sun</div>
+        <div class="day-text">mon</div>
+        <div class="day-text">tue</div>
+        <div class="day-text">wed</div>
+        <div class="day-text">thu</div>
+        <div class="day-text">fri</div>
+        <div class="day-text">sat</div>
+    </div>
+        
+    <div class="days-grid">
+        <div class="day-container">
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day" id="sun">6</div>
+            <div class="day">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day" id="sun">13</div>
+            <div class="day">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day" id="sun">20</div>
+            <div class="day">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day">25</div>
+            <div class="day">26</div>
+            <div class="day" id="sun">27</div>
+            <div class="day">28</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+            <div class="day">31</div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+          </div>                      
+    </div>
+
+    <div class="prev-next-line">
+        <div class="prev">June<br>2025</div>
+        <div class="holidays">
+            <div class="holidays-text">Regular Holidays</div>
+            <br>
+                <div class="holidays-text">Special (Non-Working) Holidays</div>
+        </div>
+        <div class="next">August<br>2025</div>
+    </div>
+</div>
+<!-- END -->
+
+<!-- ################## August ######################## -->
+<div class="month-box">
+    <div class="month-year-line">
+        <div class="year-text" id="year1">2025</div>
+        <div class="month-text">August</div>
+        <div class="year-text" id="year2">2025</div>
+    </div>
+
+    <div class="days-names-line">
+        <div class="day-text" id="sun">sun</div>
+        <div class="day-text">mon</div>
+        <div class="day-text">tue</div>
+        <div class="day-text">wed</div>
+        <div class="day-text">thu</div>
+        <div class="day-text">fri</div>
+        <div class="day-text">sat</div>
+    </div>
+        
+    <div class="days-grid">
+        <div class="day-container">
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug">1</div>
+            <div class="day" id="aug">2</div>
+            <div class="day sun" id="aug">3</div>
+            <div class="day" id="aug">4</div>
+            <div class="day" id="aug">5</div>
+            <div class="day" id="aug">6</div>
+            <div class="day" id="aug">7</div>
+            <div class="day" id="aug">8</div>
+            <div class="day" id="aug">9</div>
+            <div class="day sun" id="aug">10</div>
+            <div class="day" id="aug">11</div>
+            <div class="day" id="aug">12</div>
+            <div class="day" id="aug">13</div>
+            <div class="day" id="aug">14</div>
+            <div class="day" id="aug">15</div>
+            <div class="day" id="aug">16</div>
+            <div class="day sun" id="aug">17</div>
+            <div class="day" id="aug">18</div>
+            <div class="day" id="aug">19</div>
+            <div class="day" id="aug">20</div>
+            <div class="day" id="aug"><a href="desc_page.html?month=August&date=21" class="holidate">21</a></div>
+            <div class="day" id="aug">22</div>
+            <div class="day" id="aug">23</div>
+            <div class="day sun" id="aug">24</div>
+            <div class="day" id="aug"><a href="desc_page.html?month=August&date=25" class="holidate">25</a></div>
+            <div class="day" id="aug">26</div>
+            <div class="day" id="aug">27</div>
+            <div class="day" id="aug">28</div>
+            <div class="day" id="aug">29</div>
+            <div class="day" id="aug">30</div>
+            <div class="day sun" id="aug">31</div>
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug"> </div>
+            <div class="day" id="aug"> </div>
+          </div>                      
+    </div>
+
+    <div class="prev-next-line">
+        <div class="prev">July<br>2025</div>
+        <div class="holidays">
+            <div class="holidays-text">Regular Holidays
+                <div class="holiday"><a href="desc_page.html?month=August&date=21" class="holiday-link">Aug. 25 (Mon) - National Heroes Day</a></div><br>
+                <div class="holidays-text">Special (Non-Working) Holidays
+                    <div class="holiday"><a href="desc_page.html?month=August&date=25" class="holiday-link">Aug. 21 (Thu) - Ninoy Aquino Day</a> </div>
+                </div>
+            </div>
+        </div>
+        <div class="next">September<br>2025</div>
+    </div>
+</div>
+<!-- END -->
+
+<!-- ################## September ######################## -->
+<div class="month-box">
+    <div class="month-year-line">
+        <div class="year-text" id="year1">2025</div>
+        <div class="month-text">September</div>
+        <div class="year-text" id="year2">2025</div>
+    </div>
+
+    <div class="days-names-line">
+        <div class="day-text" id="sun">sun</div>
+        <div class="day-text">mon</div>
+        <div class="day-text">tue</div>
+        <div class="day-text">wed</div>
+        <div class="day-text">thu</div>
+        <div class="day-text">fri</div>
+        <div class="day-text">sat</div>
+    </div>
+        
+    <div class="days-grid">
+        <div class="day-container">
+            <div class="day"> </div>
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day" id="sun">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day" id="sun">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day">20</div>
+            <div class="day" id="sun">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day">25</div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day" id="sun">28</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+          </div>                      
+    </div>
+
+    <div class="prev-next-line">
+        <div class="prev">August<br>2025</div>
+        <div class="holidays">
+            <div class="holidays-text">Regular Holidays</div>
+            <br>
+                <div class="holidays-text">Special (Non-Working) Holidays</div>
+        </div>
+        <div class="next">October<br>2025</div>
+    </div>
+</div>
+<!-- END -->
+
+<!-- ################## October ######################## -->
+<div class="month-box">
+    <div class="month-year-line">
+        <div class="year-text" id="year1">2025</div>
+        <div class="month-text">October</div>
+        <div class="year-text" id="year2">2025</div>
+    </div>
+
+    <div class="days-names-line">
+        <div class="day-text" id="sun">sun</div>
+        <div class="day-text">mon</div>
+        <div class="day-text">tue</div>
+        <div class="day-text">wed</div>
+        <div class="day-text">thu</div>
+        <div class="day-text">fri</div>
+        <div class="day-text">sat</div>
+    </div>
+        
+    <div class="days-grid">
+        <div class="day-container">
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day" id="sun">5</div>
+            <div class="day">6</div>
+            <div class="day">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day" id="sun">12</div>
+            <div class="day">13</div>
+            <div class="day">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day" id="sun">19</div>
+            <div class="day">20</div>
+            <div class="day">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day">25</div>
+            <div class="day" id="sun">26</div>
+            <div class="day">27</div>
+            <div class="day">28</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+            <div class="day"><a href="desc_page.html?month=October&date=31" class="holidate">31</a></div>
+            <div class="day"> </div>
+          </div>                      
+    </div>
+
+    <div class="prev-next-line">
+        <div class="prev">September<br>2025</div>
+        <div class="holidays">
+            <div class="holidays-text">Regular Holidays</div>
+            <br>
+                <div class="holidays-text">Special (Non-Working) Holidays
+                    <div class="holiday"><a href="desc_page.html?month=October&date=31" class="holiday-link">Oct. 31 (Fri) - All Saints' Day Eve</a></div>
+                </div>
+        </div>
+        <div class="next">November<br>2025</div>
+    </div>
+</div>
+<!-- END -->
+
+<!-- ################## November ######################## -->
+<div class="month-box">
+    <div class="month-year-line">
+        <div class="year-text" id="year1">2025</div>
+        <div class="month-text">November</div>
+        <div class="year-text" id="year2">2025</div>
+    </div>
+
+    <div class="days-names-line">
+        <div class="day-text" id="sun">sun</div>
+        <div class="day-text">mon</div>
+        <div class="day-text">tue</div>
+        <div class="day-text">wed</div>
+        <div class="day-text">thu</div>
+        <div class="day-text">fri</div>
+        <div class="day-text">sat</div>
+    </div>
+        
+    <div class="days-grid">
+        <div class="day-container">
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"><a href="desc_page.html?month=November&date=1" class="holidate">1</a></div>
+            <div class="day sun" id="nov">2</div>
+            <div class="day" id="nov">3</div>
+            <div class="day" id="nov">4</div>
+            <div class="day" id="nov">5</div>
+            <div class="day" id="nov">6</div>
+            <div class="day" id="nov">7</div>
+            <div class="day" id="nov">8</div>
+            <div class="day sun" id="nov">9</div>
+            <div class="day" id="nov">10</div>
+            <div class="day" id="nov">11</div>
+            <div class="day" id="nov">12</div>
+            <div class="day" id="nov">13</div>
+            <div class="day" id="nov">14</div>
+            <div class="day" id="nov">15</div>
+            <div class="day sun" id="nov">16</div>
+            <div class="day" id="nov">17</div>
+            <div class="day" id="nov">18</div>
+            <div class="day" id="nov">19</div>
+            <div class="day" id="nov">20</div>
+            <div class="day" id="nov">21</div>
+            <div class="day" id="nov">22</div>
+            <div class="day sun" id="nov">23</div>
+            <div class="day" id="nov">24</div>
+            <div class="day" id="nov">25</div>
+            <div class="day" id="nov">26</div>
+            <div class="day" id="nov">27</div>
+            <div class="day" id="nov">28</div>
+            <div class="day" id="nov">29</div>
+            <div class="day sun" id="nov"><a href="desc_page.html?month=November&date=30" class="holidate sun">30</a> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+            <div class="day" id="nov"> </div>
+          </div>                      
+    </div>
+
+    <div class="prev-next-line">
+        <div class="prev">October<br>2025</div>
+        <div class="holidays">
+            <div class="holidays-text">Regular Holidays
+                <div class="holiday"><a href="desc_page.html?month=November&date=30" class="holiday-link">Nov. 30 (Sun) - Bonifacio Day</a></div>
+            </div><br>
+                <div class="holidays-text">Special (Non-Working) Holidays
+                    <div class="holiday"><a href="desc_page.html?month=November&date=1" class="holiday-link">Nov. 1 (Sat) - All Saints' Day</a></div>
+                </div>
+        </div>
+        <div class="next">December<br>2025</div>
+    </div>
+</div>
+<!-- END -->
+
+<!-- ################## December ######################## -->
+<div class="month-box">
+    <div class="month-year-line">
+        <div class="year-text" id="year1">2025</div>
+        <div class="month-text">December</div>
+        <div class="year-text" id="year2">2025</div>
+    </div>
+
+    <div class="days-names-line">
+        <div class="day-text" id="sun">sun</div>
+        <div class="day-text">mon</div>
+        <div class="day-text">tue</div>
+        <div class="day-text">wed</div>
+        <div class="day-text">thu</div>
+        <div class="day-text">fri</div>
+        <div class="day-text">sat</div>
+    </div>
+        
+    <div class="days-grid">
+        <div class="day-container">
+            <div class="day"> </div>
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day" id="sun">7</div>
+            <div class="day"><a href="desc_page.html?month=December&date=8" class="holidate">8</a> </div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day" id="sun">14</div>
+            <div class="day">15</div>
+            <div class="day">16</div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day">20</div>
+            <div class="day" id="sun">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day"><a href="desc_page.html?month=December&date=24" class="holidate">24</a> </div>
+            <div class="day"><a href="desc_page.html?month=December&date=25" class="holidate">25</a></div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day" id="sun">28</div>
+            <div class="day">29</div>
+            <div class="day"><a href="desc_page.html?month=December&date=30" class="holidate">30</a></div>
+            <div class="day"><a href="desc_page.html?month=December&date=31" class="holidate">31</a></div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+            <div class="day"> </div>
+          </div>                      
+    </div>
+
+    <div class="prev-next-line">
+        <div class="prev">November<br>2025</div>
+        <div class="holidays">
+            <div class="holidays-text">Regular Holidays
+                <div class="holiday" id="dec"><a href="desc_page.html?month=December&date=25" class="holiday-link">Dec. 25 (Thu) - Christmas Day</a></div>
+                <div class="holiday" id="dec"><a href="desc_page.html?month=December&date=30" class="holiday-link">Dec. 30 (Tue) - Rizal Day</a></div>
+            </div>
+                <div class="holidays-text">Special (Non-Working) Holidays
+                    <div class="holiday" id="dec"><a href="desc_page.html?month=December&date=8" class="holiday-link">Dec. 8 (Mon) - Feast of the Immaculate Conception of Mary</a></div>
+                    <div class="holiday" id="dec"><a href="desc_page.html?month=December&date=24" class="holiday-link">Dec. 24 (Wed) - Christmas Eve</a></div>
+                    <div class="holiday" id="dec"><a href="desc_page.html?month=December&date=31" class="holiday-link">Dec. 31 (Wed) - Last Day of the Year</a></div>
+
+                </div>
+        </div>
+        <div class="next">2026</div>
+    </div>
+</div>
+<!-- END -->
+
+        <div class="blank-box">2026</div>
+
+        </div>
+    </main>
+    <footer>
+        <p>Contacts</p>
+        <!-- logos of all the contacts in here -->
+        <a target="_blank" href="https://www.facebook.com/ravenluke.quinto"><img class="contacts" src="assets/facebook.png"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/quintoravenluke"><img class="contacts" src="assets/linkedin.png"></a>
+        <a target="_blank" href="https://github.com/bacquegou"><img class="contacts" src="assets/github.png"></a>
+
+    </footer>
+</body>
+</html>

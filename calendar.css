@@ -1,0 +1,394 @@
+/*
+header - menu, title and logo
+main 
+    container - will have the horizontal scrolling, snaps each month
+        month-box - will have the whole months in each individual box
+            month-year-line - row where month and year is stored
+                year-text
+                month-text
+            days-names-line - where sun,mon,tue, etc is stored
+                day-text
+            days-grid - will contain 7x5 boxes, will store the days
+                day-container
+                    day
+            prev-next-line - prev-next months
+            holidays? - will list all holidays in that month
+footer - just a footer with my contacts
+*/
+:root{
+    --red: #e7291f;
+    --blue: #28499c;
+    --green: #02a44e;
+    --white: #e1e3e8c9;
+    --fontfamily: "Lexend","Helvetica";
+    --calendarfont: "Ultra","Alfa Slab One";
+    --weeknamesfont: "Alfa Slab One","Impact";
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    
+}
+
+body header{
+    display: flex;
+    height: 20%;
+    z-index: 10;
+    padding: 20px;
+    background-color: var(--blue);
+    justify-content: space-between;
+
+    border-bottom: 1.5px solid black;
+}
+.calendar-text{
+    color: white;
+    font-family: var(--fontfamily);
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    padding: 0 20px 0 20px ;
+}
+
+.container{
+    /*
+    side scrolling feature
+    contains all the month-boxes
+    */
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 10px;
+
+    scrollbar-width: none;
+
+    padding: 2% 0;
+    min-height: 80vh;
+    flex: 1;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.container::before,
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 110%;
+    
+    width: 30%; /* Width of the vignette effect */
+    z-index: 1;
+}
+
+.container::before {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White-to-transparent gradient */
+    left: 0; /* Left side gradient */
+}
+
+.container::after {
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* White-to-transparent gradient */
+    right: 0; /* Right side gradient */
+}
+/* ################################# MONTH ##########################################*/
+.blank-box{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow: hidden;
+    
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--red);
+    font-size: 5rem;
+    font-family: var(--calendarfont);
+
+    
+}
+.month-box{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow: hidden;
+    
+    width: 500px;
+    height: 500px;
+
+    background-color: var(--white);
+    border: 1.5px solid var(--blue);
+    border-radius: 10px;
+
+    padding: 3px;
+    scroll-snap-align: center;
+}
+
+.month-year-line{
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--white);
+
+    font-family:var(--calendarfont);
+    color: white;
+    font-size: 2rem;
+
+   gap: 3px;
+}
+
+.month-text,.year-text{
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+
+    padding: 3px;
+}
+.month-text{
+    background-color: var(--blue);
+    padding: 0 30px;
+}
+#year1{
+    border-radius: 6px 0 0 0 ;
+}
+#year2{
+    border-radius: 0 6px 0 0;
+}
+
+/* ################################# WEEK DAYS ##########################################*/
+
+.days-names-line{
+    display: grid;
+    grid-template-columns:repeat(7,1fr);
+    gap: 1px;
+    
+
+    font-family: var(--weeknamesfont);
+    text-transform: capitalize;
+    color: var(--blue);
+
+    padding: 2px 0;
+
+}
+.day-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid var(--blue);
+
+    font-size: 1rem;
+
+    padding: 15px -10px;
+}
+/* ################################# DAYS ##########################################*/
+#sun,.sun{
+    color: var(--red);
+}
+.holiday-link:visited,.holiday-link{
+    color: var(--red);
+    text-decoration: none;
+}
+.holiday-link:hover{
+    font-weight: bold;
+}
+.holidate:hover{
+    font-weight: bold;
+    transform: scale(1.2);
+    border: 0;
+}
+.holidate:visited{
+    color: var(--blue);
+}
+.sun.holidate{
+    color: var(--red);
+}
+.holidate{
+    position: relative; /* Required for ::after positioning */
+    text-decoration: none; /* Remove default underline */
+    color: var(--blue);
+}
+.holidate::after {
+    content: ''; /* Add an empty element for the underline */
+    position: absolute;
+    bottom: -5px; 
+    left: 50%;
+
+    transform: translateX(-50%); 
+    width: 30px; 
+    height: 5px; 
+    
+    background-color: var(--red); 
+}
+.holidate:hover::after {
+    content: none; /* Add an empty element for the underline */
+
+}
+
+.day-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(7, 1fr); 
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1px;
+
+    background-color: var(--white);
+    font-family: var(--calendarfont);
+    color: var(--blue);    
+}
+#mar, #aug, #nov{
+    padding: 9.5px 0;
+    grid-template-columns: repeat(7, 0.5fr); 
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0 0;
+}
+
+.day{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1.5px solid var(--blue);
+
+    font-size: 1.5rem;
+
+    padding: 15px 0;
+}
+
+/* ################################# PREV NEXT HOLIDAYS LINE ##########################################*/
+.prev-next-line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    overflow: visible;
+}
+.prev,.next,.holidays-text{
+    color: var(--red);
+    font-family: var(--weeknamesfont);
+    font-size: 0.75rem;
+}
+.holidays-text{
+    text-align: center;
+}
+.holiday{
+    font-family: var(--fontfamily);
+}
+.prev,.next{
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+}
+.prev{
+    text-align: right;
+}
+.holidays{
+    align-self: flex-start;
+    text-align: center;
+    padding: 5px 0;
+}
+#dec,#apr{
+    font-size: 0.5rem;
+}
+/* ################################# FOOTER ##########################################*/
+footer{
+    background-color: var(--red);
+    height: 10%;
+    padding: 2%;
+    text-align: center;
+
+    z-index: 10;
+
+
+    border-top: 1.5px solid black;
+
+    font-family: var(--fontfamily);
+    font-size: 0.75rem;
+    color: white;
+}
+
+.contacts{
+    display: inline-block;
+    height: 26px;
+    margin: auto;
+}
+
+/* ################################# DESC PAGE ##########################################*/
+.holi-desc {
+    display: flex;       
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center; 
+    
+    width: 100%;
+    padding: 4%;
+}
+.holi-desc-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    width: 100%;
+
+}
+
+.holi-img {
+    width: 65%;    
+    height: auto;  
+    margin-right: 3%; 
+
+    border-radius: 3%;
+    margin: 2%;
+
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.holi-text, .holi-details {
+
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
+
+}
+
+.holi-text{
+    font-family: var(--weeknamesfont);
+    font-weight: normal;
+    font-size: 1.5rem;
+
+    padding: 2% 0;
+    text-align: center;
+}
+.holi-details{
+    font-family: var(--fontfamily);
+    font-weight: normal;
+    font-size: .75rem;
+    text-align: justify;
+}
+#holiday-link{
+    color: var(--blue);
+    text-decoration: none;
+}
+#holiday-link:hover{
+    transform: scale(1.1);
+}
+
+
